@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5b8fee" />
+    <title>Jogo Mario — HTML, CSS e JavaScript</title>
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="gameboard" id="gameboard" aria-label="Jogo Mario">
+        <div class="hud" id="hud">
+          <div><span>PONTOS</span><strong id="score">00000</strong></div>
+          <div><span>TEMPO</span><strong id="time">000</strong></div>
+          <div><span>RECORDE</span><strong id="high-score">00000</strong></div>
+        </div>
+        <div class="cloud-layer" aria-hidden="true"><img class="clouds" src="/assets/images/clouds.png" alt="" /></div>
+        <img class="pipe" id="pipe" src="/assets/images/pipe.png" alt="Cano verde" />
+        <img class="mario" id="mario" src="/assets/images/mario.gif" alt="Mario" />
+        <div class="grass" aria-hidden="true"></div>
+        <div class="start-panel" id="start-panel">
+          <p class="kicker">Tutorial HTML · CSS · JavaScript</p>
+          <h1>Mario <em>Jump</em></h1>
+          <p>Pressione uma tecla para saltar sobre o cano. Se não pular a tempo, é game over.</p>
+          <button id="start-button">Começar</button>
+          <small>A / D ou ← / → movem o cenário · Espaço pula</small>
+        </div>
+        <div class="game-over" id="game-over" hidden>
+          <img src="/assets/images/game-over.png" alt="Game Over" />
+          <h2>Você bateu!</h2>
+          <p id="final-score">Pontuação: 00000</p>
+          <button id="restart-button">Reiniciar</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
